@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Mo's Mobile Mechanic | Wharton County, TX</title>
-  <meta name="description" content="Request mobile auto and diesel service from Mo's Mobile Mechanic. Call, email, or send a service request online." />
+  <title>Schedule &amp; Contact | Mo's Mobile Mechanic | Wharton County, TX</title>
+  <meta name="description" content="Book a mobile diagnostic visit with Mo's Mobile Mechanic in Wharton County, TX, send a service request, or find your VIN before you book." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,21 +16,16 @@
     <div class="nav-inner">
       <a class="brand" href="index.html" aria-label="Mo's Mobile Mechanic home">
         <img class="brand-logo" src="assets/logo.png" alt="Mo's Mobile Mechanic logo" />
-        <span class="brand-text">
-          <span class="brand-mark">MO'S</span>
-          <span class="brand-sub">Mobile Mechanic</span>
-        </span>
+        
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="services.html" data-nav="services">Services</a>
         <a href="about.html" data-nav="about">About</a>
-        <a href="schedule.html" data-nav="schedule">Schedule</a>
+        <a href="contact.html#schedule" data-nav="schedule">Schedule</a>
         <a href="index.html#faq" data-nav="faq">FAQ</a>
       </nav>
       <a class="nav-cta" href="contact.html" data-nav="contact">Contact</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </header>
   <div class="nav-backdrop" id="navBackdrop"></div>
@@ -38,7 +33,7 @@
     <nav aria-label="Mobile">
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
-      <a href="schedule.html">Schedule</a>
+      <a href="contact.html#schedule">Schedule</a>
       <a href="index.html#faq">FAQ</a>
       <a class="mobile-cta" href="contact.html">Contact</a>
     </nav>
@@ -46,23 +41,39 @@
   <section class="hero hero--page">
     <div class="hero-overlay"></div>
     <div class="hero-content hero-content--center">
-      <span class="eyebrow eyebrow-center eyebrow-light"><i></i>Get In Touch<i></i></span>
-      <h1>Request Service</h1>
-      <p class="hero-sub">Tell me about your vehicle and what is going on. I will follow up to confirm details and schedule your visit.</p>
+      <span class="eyebrow eyebrow-center eyebrow-light"><i></i>Book A Visit<i></i></span>
+      <h1>Schedule &amp; Get In Touch</h1>
+      <p class="hero-sub">Book a diagnostic visit, send your vehicle details, or just reach out. However you want to start, this is the place.</p>
+    </div>
+  </section>
+  <section class="section" id="schedule">
+    <div class="container frame frame--first booking-frame">
+      <div class="booking-inner">
+        <span class="eyebrow eyebrow-center"><i></i>Online Booking<i></i></span>
+        <h2>Reserve A Diagnostic Visit</h2>
+        <p class="lede">A diagnostic visit is $75 per hour, typically about an hour, and that fee is credited straight back to your invoice if you approve the repair.</p>
+        <a class="btn btn-primary btn-lg" href="https://app.reclaim.ai/m/mosmobilemechanic/1-hr-diagnosis" target="_blank" rel="noopener">Book Your Diagnosis Online</a>
+        <p class="booking-note">Opens the live booking calendar. Prefer to talk first? Call or text <a href="tel:+19794889020">(979) 488-9020</a>.</p>
+        <div class="booking-points">
+          <div><strong>~1 Hr</strong><span>Typical Visit</span></div>
+          <div><strong>Credited</strong><span>Back On Repairs</span></div>
+          <div><strong>Wharton Co.</strong><span>No Trip Charge</span></div>
+        </div>
+      </div>
+      <!-- EMBED SLOT: to show the calendar inline instead of the button above, drop the Reclaim embed iframe here and hide .booking-cta-box. -->
+      <!-- <div class="booking-embed"><iframe src="https://app.reclaim.ai/m/mosmobilemechanic/1-hr-diagnosis" title="Book a diagnosis" loading="lazy"></iframe></div> -->
     </div>
   </section>
   <section class="section">
-    <div class="container frame frame--first contact-grid">
+    <div class="container frame contact-grid">
       <div class="contact-form-col">
-        <span class="eyebrow"><i></i>Send A Message</span>
+        <span class="eyebrow"><i></i>Send Details</span>
         <h2>Service Request</h2>
+        <p class="lede">Not ready to book a time yet? Send your vehicle details and what is going on, and I will follow up to get you scheduled.</p>
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST" class="contact-form" novalidate>
           <input type="hidden" name="_subject" value="New service request from Mo's Mobile Mechanic site" />
           <input type="hidden" name="_next" value="thank-you.html" />
-          <div class="field-row">
-            <label>Name<input type="text" name="name" required /></label>
-            <label>Phone<input type="tel" name="phone" required /></label>
-          </div>
+          <div class="field-row"><label>Name<input type="text" name="name" required /></label><label>Phone<input type="tel" name="phone" required /></label></div>
           <label>Email<input type="email" name="email" required /></label>
           <label>Vehicle (Year, Make, Model)<input type="text" name="vehicle" placeholder="2018 Ram 2500 Cummins" /></label>
           <label>What is going on?<textarea name="message" rows="4" required></textarea></label>
@@ -77,58 +88,37 @@
           <li><span class="info-label">Hours</span>Mon to Fri, 9:00 AM to 5:00 PM</li>
           <li><span class="info-label">Service Area</span>Wharton County, TX and beyond</li>
         </ul>
-        <a class="btn btn-secondary btn-block" href="https://app.reclaim.ai/m/mosmobilemechanic/1-hr-diagnosis" target="_blank" rel="noopener">Book Online</a>
         <p class="info-note">Free wiper replacement and washer fluid top-off with any paid service. You just cover the wipers.</p>
       </aside>
     </div>
   </section>
+  <section class="section" id="vin">
+    <div class="container frame">
+      <div class="frame-head"><span class="eyebrow"><i></i>Before You Book</span><h2>Find Your VIN</h2><p class="lede">Your Vehicle Identification Number lets me pull the right service manuals, quote accurate estimates, order the correct parts, and check for recalls. Here is where to find it.</p></div>
+      <div class="vin-grid">
+        <article class="card"><h3>Driver's Side Door</h3><p>Open the driver's side door and check the door post where it latches. There is usually a label or sticker with the VIN.</p></article>
+        <article class="card"><h3>Registration</h3><p>Your VIN is printed on your vehicle registration document. Keep a copy somewhere safe and handy.</p></article>
+        <article class="card"><h3>Insurance Card</h3><p>Your insurance card or policy documents will also list the VIN, so that is another easy place to check.</p></article>
+        <article class="card"><h3>Dashboard</h3><p>Stand outside the vehicle and look at the corner where the dashboard meets the windshield on the driver's side.</p></article>
+      </div>
+    </div>
+  </section>
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-col footer-brand">
-        <span class="brand-mark">MO'S MOBILE MECHANIC</span>
-        <p>Veteran-owned, Cummins Certified mobile repair serving Wharton County, TX. Therapy through tech and teaching.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+19794889020">(979) 488-9020</a></li>
-          <li><a href="mailto:mosmobilemechanic@proton.me">mosmobilemechanic@proton.me</a></li>
-          <li>Mon to Fri, 9 to 5</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Automotive Repair</a></li>
-          <li><a href="services.html">Diesel Repair</a></li>
-          <li><a href="services.html">Heavy Equipment</a></li>
-          <li><a href="services.html">Cummins Specialty</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="schedule.html#vin">Find Your VIN</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div class="footer-col footer-brand"><span class="brand-mark">MO'S MOBILE MECHANIC</span><p>Veteran-owned, Cummins Certified mobile repair serving Wharton County, TX. Therapy through tech and teaching.</p></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+19794889020">(979) 488-9020</a></li><li><a href="mailto:mosmobilemechanic@proton.me">mosmobilemechanic@proton.me</a></li><li>Mon to Fri, 9 to 5</li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Automotive Repair</a></li><li><a href="services.html">Diesel Repair</a></li><li><a href="services.html">Heavy Equipment</a></li><li><a href="services.html">Cummins Specialty</a></li></ul></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html#schedule">Schedule</a></li><li><a href="contact.html#vin">Find Your VIN</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Mo's Mobile Mechanic. All rights reserved.</span>
       <div class="footer-bottom-right">
-        <a class="social" href="#" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8.2V14h2.3v7z"/></svg>
-        </a>
+        <a class="social" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8.2V14h2.3v7z"/></svg></a>
         <a class="otm-credit" href="https://otm-designs.com" target="_blank" rel="noopener">Built by OTM Web Design</a>
       </div>
     </div>
   </footer>
-  <div class="call-bar">
-    <a href="tel:+19794889020">Call Now</a>
-    <a href="schedule.html">Schedule</a>
-  </div>
+  <div class="call-bar"><a href="tel:+19794889020">Call Now</a><a href="contact.html#schedule">Schedule</a></div>
   <script src="script.js"></script>
 </body>
 </html>
